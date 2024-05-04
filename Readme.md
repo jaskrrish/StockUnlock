@@ -47,3 +47,9 @@ npm install
   </div>
 </div>
 ```
+
+- To run use this command in your terminal
+
+```bash
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+```

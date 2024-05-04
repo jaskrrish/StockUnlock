@@ -5,83 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <title>Document</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+  <body class="p-2">
     <!-- Navbar -->
-    <nav class="flex items-center justify-around p-6">
-      <div class="flex items-center flex-shrink-0 text-black mr-6">
-        <img src="./assets/logo.png" alt="Logo" class="h-8 w-8 mr-2" />
-        <span class="font-semibold text-xl tracking-tight">Stock Unlock</span>
-      </div>
-      <div
-        class="w-full text-center block flex-grow lg:flex lg:items-center lg:w-auto"
-      >
-        <div class="text-sm lg:flex-grow">
-          <a
-            href="#"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4"
+    <header class="bg-[#e7edef] mt-3">
+      <nav class="p-3 flex justify-between items-center w-[92%] mx-auto">
+        <a href="/" class="flex gap-2 items-center">
+          <img
+            src="./assets/logo.png"
+            alt="Logo"
+            class="h-8 w-8 sm:mr-1 md:mr-2"
+          />
+          <span class="font-semibold text-sm md:text-xl md:tracking-tight"
+            >Stock Unlock</span
           >
-            Home
-          </a>
-          <a
-            href="#"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4"
+        </a>
+        <div
+          class="nav-links duration-500 md:static absolute bg-[#e7edef] md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex md:flex-row flex-col items-center px-5"
+        >
+          <ul
+            class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
           >
-            Features
-          </a>
-          <a
-            href="#"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4"
-          >
-            Testimonials
-          </a>
-          <a
-            href="#"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white mr-4"
-          >
-            Pricing
-          </a>
-          <a
-            href="#"
-            class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-white"
-          >
-            FAQs
-          </a>
+            <li>
+              <a class="hover:text-gray-500" href="#">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="#">Features</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="#">Testimonials</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="#">Pricing</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-500" href="#">FAQ's</a>
+            </li>
+          </ul>
+          <div class="md:hidden flex flex-col md:my-0 md:ml-0 ml-[50px] my-4">
+            <button
+              class="bg-transparent flex px-5 py-2 my-2 md:text-xl text-sm rounded-full"
+            >
+              Login
+            </button>
+            <button
+              class="rounded-lg sm:text-xs flex md:gap-3 my-2 gap-1 items-center px-4 py-2 text-blue-500 md:font-semibold bg-[#3E83EB]/10"
+            >
+              <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+              <div>Get Started for Free</div>
+            </button>
+          </div>
         </div>
-        <div>
-          <a
-            href="#"
-            class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+        <div class="flex items-center gap-6">
+          <button
+            class="bg-transparent md:flex hidden px-5 py-2 text-lg rounded-full"
           >
             Login
-          </a>
-          <a
-            href="#"
-            class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent bg-[#3E83EB]/10 hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 ml-2"
+          </button>
+          <button
+            class="rounded-lg text-lg md:flex hidden md:gap-3 gap-1 items-center px-4 py-2 text-blue-500 md:font-semibold bg-[#3E83EB]/10"
           >
-            Get Started for Free
-          </a>
+            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+            <div>Get Started for Free</div>
+          </button>
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          ></ion-icon>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
+
     <!--  -->
     <!-- Hero Section -->
-    <div class="bg-white flex items-center justify-center">
+    <div
+      class="bg-[#e7edef] flex flex-wrap-reverse items-center justify-center"
+    >
       <div class="p-2 mx-4">
-        <p class="text-4xl font-bold">
+        <p class="md:text-4xl my-4 text-3xl font-bold">
           Reliable Insights <br />
           for Rewarding Returns
         </p>
-        <div class="w-fit bg-white shadow-lg rounded-md my-4">
+        <div
+          class="w-fit flex md:flex-row flex-col md:bg-white sm:bg-none md:shadow-lg rounded-md my-4"
+        >
           <input
             type="email"
             placeholder="Enter your Email.."
-            class="px-4 py-2 bg-white outline-none"
+            class="px-4 py-2 bg-white md:shadow-none shadow-lg outline-none md:bg-none md:my-0 my-2 md:w-fit w-[90vw] rounded-md"
           />
           <button
-            class="px-4 py-[4px] font-semibold outline-none border-2 rounded-lg bg-blue-700 text-white"
+            class="px-4 py-[10px] font-semibold outline-none border-2 rounded-lg bg-[#3E83EB] text-white md:w-fit w-[60vw]"
           >
-            Getting Started For Free >
+            Get Started for Free &gt;
           </button>
         </div>
         <p class="text-gray-400">
@@ -90,138 +108,304 @@
         </p>
       </div>
       <div>
-        <img src="./assets/hero-1.jpg" alt="hero-1" />
+        <img
+          src="./assets/hero-12.png"
+          alt="hero-1"
+          class="md:w-[750px] md:h-[620px] w-[390px] h-[298px]"
+        />
       </div>
     </div>
     <!--  -->
     <!-- Stats Image -->
     <div
-      class="h-full text-white py-12 rounded-lg mx-4 flex items-center justify-evenly bg-cover bg-center"
+      class="h-full text-white py-12 px-4 rounded-lg mx-4 flex md:flex-row flex-col items-center md:justify-evenly justify-center bg-cover bg-center"
       style="background-image: url('./assets/stat-1.png')"
     >
-      <div>
-        <p class="text-5xl font-bold">27%</p>
-        <p>Users are satisfied with Stock Unlock</p>
+      <div class="my-3">
+        <p class="md:text-5xl text-2xl text-center font-semibold">27%</p>
+        <p class="text-center">Users are satisfied with Stock Unlock</p>
       </div>
-      <div>
-        <p class="text-5xl font-bold">10,000+</p>
-        <p>users have an active subsciption of Stock Unlock</p>
+      <div class="my-3">
+        <p class="md:text-5xl text-2xl text-center font-semibold">10,000+</p>
+        <p class="text-center">
+          Users have an active subsciption of Stock Unlock
+        </p>
       </div>
-      <div>
-        <p class="text-5xl font-bold">95%</p>
-        <p>Users say that Stock Unlock is impactful</p>
+      <div class="my-3">
+        <p class="md:text-5xl text-2xl text-center font-semibold">95%</p>
+        <p class="text-center">Users say that Stock Unlock is impactful</p>
       </div>
     </div>
     <!--  -->
     <!-- Be a Better Investor -->
     <div class="mx-4 my-6">
-      <p class="text-5xl mx-8 font-bold">
-        We want to help you <br />
-        become a better person.
+      <p class="md:text-5xl text-3xl mx-8 font-semibold">
+        We want to help <br class="md:hidden block" />
+        you <br class="hidden md:inline" />
+        become a
+        <br class="md:hidden block" />
+        better person.
       </p>
-      <div class="flex gap-4 my-8 mx-4 justify-center">
-        <div class="my-[3rem]">
+      <div class="flex md:flex-row flex-col gap-4 my-8 mx-4 justify-center">
+        <div class="md:my-[3rem] my-2">
           <div class="w-full mx-2">
             <img src="./assets/hero-5.png" alt="Hero" class="w-full" />
           </div>
-          <p class="text-2xl font-bold">Learn.</p>
-          <p class="text-xl text-gray-400">
-            Stock Unlock blends cutting-edge market <br />
-            insights with easy-to-use tools, tailored for <br />
-            your financial journey
-          </p>
+          <div class="my-2">
+            <p class="text-2xl font-bold">Learn.</p>
+            <p class="text-xl text-gray-400">
+              Stock Unlock blends cutting-edge market <br />
+              insights with easy-to-use tools, tailored for <br />
+              your financial journey
+            </p>
+          </div>
         </div>
-        <div class="my-[7rem]">
+        <div class="md:my-[7rem] my-2">
           <div class="w-full mx-2">
             <img src="./assets/hero-4.png" alt="Hero" class="w-full" />
           </div>
-          <p class="text-2xl font-bold">Research.</p>
-          <p class="text-xl text-gray-400">
-            Stock Unlock blends cutting-edge market <br />
-            insights with easy-to-use tools, tailored for <br />
-            your financial journey
-          </p>
+          <div class="my-2">
+            <p class="text-2xl font-bold">Research.</p>
+            <p class="text-xl text-gray-400">
+              Stock Unlock blends cutting-edge market <br />
+              insights with easy-to-use tools, tailored for <br />
+              your financial journey
+            </p>
+          </div>
         </div>
-        <div>
+        <div class="my-2">
           <div class="w-full mx-2">
             <img src="./assets/hero-5.png" alt="Hero" class="w-full" />
           </div>
-          <p class="text-2xl font-bold">Track.</p>
-          <p class="text-xl text-gray-400">
-            Stock Unlock blends cutting-edge market <br />
-            insights with easy-to-use tools, tailored for <br />
-            your financial journey
-          </p>
+          <div class="my-2">
+            <p class="text-2xl font-bold">Track.</p>
+            <p class="text-xl text-gray-400">
+              Stock Unlock blends cutting-edge market <br />
+              insights with easy-to-use tools, tailored for <br />
+              your financial journey
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <!--  -->
     <!-- Ai generated Stock Image Section -->
     <div
-      class="my-6 bg-cover bg-center h-screen relative py-2"
-      style="background-image: url('./assets/hero-11.png')"
+      class="my-6 bg-cover bg-center md:h-screen md:relative py-2 bg-radialGradient md:bg-[url('./assets/hero-13.png')]"
     >
-      <p
-        class="relative top-[170px] left-[690px] text-white text-5xl font-bold"
+      <div
+        class="flex flex-col md:items-end text-left md:p-4 md:mr-12 md:mt-[5rem]"
       >
-        AI Generated Stock <br />
-        and Portfolio Reports <br />
-        packed with Insights
-      </p>
-      <p class="relative top-[200px] left-[690px] text-2xl text-gray-400">
-        Stock Unlock blends cutting-edge market insights with easy-to-use tools,
-        <br />
-        tailored for your financial journey.
-      </p>
-      <button
-        class="relative top-[220px] left-[690px] bg-white rounded-lg text-black px-4 py-2 flex items-center gap-4"
-      >
-        <div class="w-2 h-2 rounded-full bg-black"></div>
-        <div>Try AI Reports</div>
-      </button>
-      <button
-        class="relative top-[70px] left-[500px] bg-blue-600 rounded-full text-white px-2 py-1"
+        <p
+          class="text-white md:text-5xl text-2xl font-semibold md:mx-0 md:mr-[4.87rem] mx-4 my-2 text-left"
+        >
+          AI Generated Stock and <br />
+          Portfolio Reports packed <br />
+          with Insights
+        </p>
+        <p
+          class="md:text-xl text-lg text-gray-400 text-left md:mx-0 md:mr-[1.4rem] mx-4 my-2"
+        >
+          Stock Unlock blends cutting-edge market insights with easy-to-use
+          <br />
+          tools, tailored for your financial journey.
+        </p>
+        <button
+          class="bg-white w-fit rounded-lg text-black px-4 py-2 flex items-center gap-4 md:mx-0 md:mr-[29.2rem] mx-4 my-2"
+        >
+          <div class="w-2 h-2 rounded-full bg-black"></div>
+          <div>Try AI Reports</div>
+        </button>
+      </div>
+      <!-- <button
+        class="md:absolute md:flex md:top-[320px] md:left-[480px] bg-blue-600 rounded-full text-white px-2 py-1 hidden"
       >
         Stock Unlock
-      </button>
+      </button> -->
+      <img src="./assets/mobile-hero-1.png" alt="" class="block md:hidden" />
     </div>
     <!--  -->
     <!-- Testimonials -->
     <div>
       <!-- testimonials header -->
-      <div class="my-6">
-        <div class="flex justify-around">
+      <div class="my-6 m-2">
+        <div class="flex md:justify-around flex-wrap md:flex-row flow-col">
           <div class="inline-block">
-            <p class="text-5xl flex font-bold">
+            <p class="md:text-5xl text-2xl flex font-bold">
               Rated 4.7/5
-              <span>
+              <span class="md:w-[38px] md:h-[38px] w-[17px] h-[17px]">
                 <img src="./assets/star.png" alt="" />
               </span>
               by
             </p>
-            <p class="text-5xl font-bold">12,000+ people</p>
+            <p class="md:text-5xl text-2xl font-bold">12,000+ people</p>
           </div>
-          <div class="w-[30rem]">
+          <div class="w-[30rem] my-4">
             <p class="text-xl text-gray-400">
               Our community values the easy-to-use interface, insightful
               AI-driven analysis, and comprehensive educational resources. Join
               the thousands who are enhancing their investment journey with
               Stock Unlock.
             </p>
+            <div class="my-3">
+              <button
+                class="rounded-lg flex gap-3 items-center px-4 py-2 text-blue-500 font-semibold bg-[#3E83EB]/10"
+              >
+                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                <div>Get Started for Free</div>
+              </button>
+            </div>
           </div>
         </div>
         <!-- qouted -->
         <div
-          class="flex overflow-x-auto snap-x scrolling-touch mt-[20px] mb-[20px]"
+          class="flex hide-scrollbar gap-3 overflow-x-auto snap-x scrolling-touch mt-[20px] mb-[20px]"
         >
-          <div class="relative"></div>
+          <div class="relative my-3">
+            <div>
+              <img
+                src="./assets/qoute.png"
+                alt=""
+                class="relative top-[13px] left-[30px] z-[1]"
+              />
+            </div>
+            <div
+              class="bg-[#EFF2F4] md:w-[600px] md:h-[280px] w-[320px] h-[360px] pt-[18px] rounded-lg text-black"
+            >
+              <p class="font-medium text-2xl mx-4 ml-6 my-2">
+                “Stock Unlock's simplified my investment management remarkably.
+                Aenean ac tortor scelerisque, venenatis purus ut, condimentum
+                nunc.”
+              </p>
+              <p class="md:mt-16 mt-8 mx-4">
+                - <span class="font-bold">Michael Chen</span>, Certified
+                Financial Planner
+              </p>
+            </div>
+          </div>
+          <div class="relative my-8">
+            <div>
+              <img
+                src="./assets/qoute.png"
+                alt=""
+                class="relative top-[13px] left-[30px] z-[1]"
+              />
+            </div>
+            <div
+              class="bg-[#EFF2F4] md:w-[600px] md:h-[280px] w-[320px] h-[360px] pt-[18px] rounded-lg text-black"
+            >
+              <p class="font-medium text-2xl mx-4 ml-6 my-2">
+                “Stock Unlock's simplified my investment management remarkably.
+                Aenean ac tortor scelerisque, venenatis purus ut, condimentum
+                nunc.”
+              </p>
+              <p class="md:mt-16 mt-8 mx-4">
+                - <span class="font-bold">Michael Chen</span>, Certified
+                Financial Planner
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <div>
+              <img
+                src="./assets/qoute.png"
+                alt=""
+                class="relative top-[13px] left-[30px] z-[1]"
+              />
+            </div>
+            <div
+              class="bg-[#EFF2F4] md:w-[600px] md:h-[280px] w-[320px] h-[360px] pt-[18px] rounded-lg text-black"
+            >
+              <p class="font-medium text-2xl mx-4 ml-6 my-2">
+                “Stock Unlock's simplified my investment management remarkably.
+                Aenean ac tortor scelerisque, venenatis purus ut, condimentum
+                nunc.”
+              </p>
+              <p class="md:mt-16 mt-8 mx-4">
+                - <span class="font-bold">Michael Chen</span>, Certified
+                Financial Planner
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <!--  -->
     <hr class="border-[1px] my-4" />
     <!-- Footer -->
-
+    <footer class="my-4 m-2 flex flex-wrap justify-around items-center">
+      <!-- left side -->
+      <div>
+        <!-- logo -->
+        <div class="flex items-center">
+          <img src="./assets/logo.png" alt="Logo" class="h-8 w-8 mr-2" />
+          <span class="font-semibold text-xl tracking-tight">Stock Unlock</span>
+        </div>
+        <!-- input -->
+        <div class="w-fit font-semibold bg-white md:shadow-lg rounded-lg my-4">
+          <input
+            type="email"
+            placeholder="Enter your Email.."
+            class="px-4 py-2 bg-white md:shadow-none shadow-lg outline-none md:bg-none md:my-0 my-2 md:w-fit w-[90vw] rounded-md"
+          />
+          <button
+            class="px-4 py-[10px] font-semibold outline-none border-2 rounded-lg bg-[#3E83EB] text-white"
+          >
+            Subscribe to Newsletter &gt;
+          </button>
+        </div>
+        <!-- para -->
+        <p class="text-xl text-gray-400">
+          Comes with a free 20-Step Investing Checklist <br />
+          when you sign up. No spam.
+        </p>
+        <!-- social media -->
+        <div class="flex md:gap-[2rem] gap-4 my-4">
+          <img src="./assets/facebook.png" alt="Facebook" />
+          <img src="./assets/twitter.png" alt="Twitter" />
+          <img src="./assets/linkedin.png" alt="Linkedin" />
+          <img src="./assets/youtube.png" alt="Youtube" />
+          <img src="./assets/discord.png" alt="Discord" />
+          <img src="./assets/spotify.png" alt="Spotify" />
+        </div>
+      </div>
+      <!-- left side end -->
+      <!-- Right side -->
+      <div class="flex gap-12 justify-center">
+        <div class="text-xl">
+          <p class="inline-block text-gray-400">Product</p>
+          <ul class="my-2">
+            <li
+              class="my-2 bg-white rounded-xl text-black px-4 py-2 flex items-center justify-center gap-4 shadow-md"
+            >
+              <div class="w-2 h-2 rounded-full bg-black"></div>
+              <div>Home</div>
+            </li>
+            <li class="my-2">Testimonials</li>
+            <li class="my-2">Pricing</li>
+            <li class="my-2">FAQ's</li>
+          </ul>
+        </div>
+        <div class="text-xl">
+          <p class="inline-block text-gray-400">Company</p>
+          <ul class="my-2">
+            <li class="my-2">Contact Us</li>
+            <li class="my-2">Terms of Service</li>
+            <li class="my-2">Privacy Policy</li>
+            <li class="my-2">FAQ's</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right side end -->
+    </footer>
+    <hr class="border-[1px] my-4" />
     <!--  -->
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+      }
+    </script>
   </body>
 </html>
